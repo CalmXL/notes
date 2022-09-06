@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>三栏 双飞翼</title>
+  <style type="text/css">
+    html, 
+    body,
+    .container {
+      height: 100%;
+      margin: 0;
+    } 
+   
+    .container .column {
+      float: left;
+      height: 100%;
+    }
+
+    .container .middle {
+      width: 100%;
+      background-color: aqua;
+    }
+
+    .container .middle .main {
+      height: 100%;
+      margin: 0 200px 0 150px;
+    }
+
+    .container .left {
+      width: 150px;
+      margin-left: -100%;
+      background-color: green;
+    }
+
+    .container .right {
+      width: 200px;
+      margin-left: -200px;
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="column middle">
+      <div class="main">fhjashfjkshadjfhasjkdhfjksadhfjlsdhkfjshdajkfhsdjkahfjdsh</div>
+    </div>
+    <div class="column left"></div>
+    <div class="column right"></div>
+  </div>
+</body>
+</html>
