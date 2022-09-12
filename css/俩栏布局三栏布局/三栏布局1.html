@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>三栏 圣杯布局</title>
-  <style type="text/css">
+  <style>
     html, 
     body,
     .container {
@@ -13,8 +13,8 @@
       margin: 0;
     } 
 
-    .container {
-      margin: 0 200px 0 150px;
+    div {
+      box-sizing: border-box;
     }
 
     .container .column {
@@ -25,27 +25,30 @@
 
     .container .middle {
       width: 100%;
+      padding: 0 200px 0 150px;
       background-color: aqua;
     }
 
     .container .left {
       width: 150px;
-      left: -150px;
+      left: 0;
       margin-left: -100%;
       background-color: red;
     }
 
     .container .right {
       width: 200px;
-      right: -200px;
+      right: 0;
       margin-left: -200px;
       background-color: blue;
     }
+
+    
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="column middle"></div>
+    <div class="column middle">123fasndsdjklgajdjbnshjvbxcnvbxcmnbjhasddfgsdhjksdjk</div>
     <div class="column left"></div>
     <div class="column right"></div>
   </div>
