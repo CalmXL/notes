@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!--
+    指定一个函数作为第二个参数，这种情况下, 当匹配执行后， 函数就会执行。
+    函数的返回值作为替换的字符串。
+    第一个参数是正则，并且全局匹配模式， 那么这个方法将会多次调用， 每次匹配都会被调用。
+  -->
+
+  <div>
+    {{ name }}, 你好,
+    {{ age }}, 年龄 
+  </div>
+
+  <script>
+    var oDiv = document.querySelector('div'),
+        str = oDiv.innerHTML;
+
+      var obj = {
+        name: 'xuelei',
+        age: 18
+      }
+
+    var list = '';
+    list = str.replace(/\{\{(.*?)\}\}/g, function (node, key) {
+
+      return obj[key.trim()];
+    });
+
+    console.log(list);
+
+  </script>
+</body>
+</html>
